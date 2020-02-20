@@ -2,13 +2,29 @@ import React, { Component } from "react"
 import styled from "styled-components"
 
 class Layout extends Component {
+  state = {
+    currentScrollHeight: 0,
+  }
+  componentDidMount() {
+    window.onscroll = () => {
+      const newScrollHeight = Math.ceil(window.scrollY / 10) * 10
+      console.log(newScrollHeight, window.scrollY)
+      if (this.state.currentScrollHeight !== newScrollHeight) {
+        this.setState({
+          currentScrollHeight: newScrollHeight,
+        })
+      }
+    }
+  }
   render() {
     const { title, children } = this.props
+    const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
+    console.log(opacity)
 
     return (
       <Wrapper>
         <Header>
-          <Title>Dewdrop Counseling</Title>
+          <Title style={{ opacity }}>Dewdrop Counseling</Title>
         </Header>
         <div
           style={{
