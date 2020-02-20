@@ -9,6 +9,10 @@ class Layout extends Component {
     return (
       <Wrapper>
         <Header>
+          <img
+            src="https://eus-www.sway-cdn.com/s/NUaBApAt1Edq4cLg/images/t7L1QlOYA5zBQN?quality=3840&amp;allowAnimation=true"
+            alt="dewdrop"
+          />
           <Link
             style={{
               boxShadow: `none`,
@@ -17,7 +21,7 @@ class Layout extends Component {
             }}
             to={"/"}
           >
-            {title}
+            {/* {title} */}
           </Link>
         </Header>
         <div
@@ -35,10 +39,8 @@ class Layout extends Component {
 }
 
 const Header = styled.div`
-  padding: 3rem;
   text-align: center;
   color: white;
-  background: green;
 `
 
 const Wrapper = styled.div`
