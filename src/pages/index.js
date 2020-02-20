@@ -1,11 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { Component } from "react"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
+import styled from "styled-components"
 
-class IndexPage extends React.Component {
+class IndexPage extends Component {
   render() {
     const siteTitle = "Dewdrops Counseling"
 
@@ -13,26 +13,22 @@ class IndexPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`Tampa`, `counseling`, `mental health`, `Gwenny`]}
         />
-        <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page :)</p>
-        <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
-        </p>
-        <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
+        <Hr />
+        <Image src="https://eus-www.sway-cdn.com/s/NUaBApAt1Edq4cLg/images/VgFd0hOBTfKL6W?quality=3840&amp;allowAnimation=true" />
       </Layout>
     )
   }
 }
+
+const Hr = styled.hr`
+  /* margin: 2rem 20rem; */
+`
+
+const Image = styled.img`
+  /* padding: 0 5rem; */
+  max-width: 100%;
+`
 
 export default IndexPage

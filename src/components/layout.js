@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 class Layout extends Component {
@@ -9,20 +8,7 @@ class Layout extends Component {
     return (
       <Wrapper>
         <Header>
-          <img
-            src="https://eus-www.sway-cdn.com/s/NUaBApAt1Edq4cLg/images/t7L1QlOYA5zBQN?quality=3840&amp;allowAnimation=true"
-            alt="dewdrop"
-          />
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={"/"}
-          >
-            {/* {title} */}
-          </Link>
+          <Title>Dewdrop Counseling</Title>
         </Header>
         <div
           style={{
@@ -39,8 +25,24 @@ class Layout extends Component {
 }
 
 const Header = styled.div`
-  text-align: center;
+  background-image: url("https://eus-www.sway-cdn.com/s/NUaBApAt1Edq4cLg/images/t7L1QlOYA5zBQN?quality=3840&amp;allowAnimation=true");
+  position: relative;
   color: white;
+  background-size: cover;
+  height: 100vh;
+`
+
+const Title = styled.div`
+  position: absolute;
+  font-size: 8vw;
+  text-align: center;
+  width: 100%;
+  bottom: 2vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media screen and (min-width: 600px) {
+    font-size: 5vw;
+  }
 `
 
 const Wrapper = styled.div`
