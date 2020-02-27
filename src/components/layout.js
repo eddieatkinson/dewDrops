@@ -52,7 +52,7 @@ const Title = styled.div`
   font-size: 8vw;
   text-align: center;
   width: 100%;
-  bottom: 6vw;
+  bottom: 8vw;
   left: 50%;
   transform: translate(-50%, -50%);
   @media screen and (min-width: 600px) {
