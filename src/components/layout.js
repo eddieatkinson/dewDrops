@@ -8,7 +8,6 @@ class Layout extends Component {
   componentDidMount() {
     window.onscroll = () => {
       const newScrollHeight = Math.ceil(window.scrollY / 10) * 10
-      console.log(newScrollHeight, window.scrollY)
       if (this.state.currentScrollHeight !== newScrollHeight) {
         this.setState({
           currentScrollHeight: newScrollHeight,
@@ -19,7 +18,6 @@ class Layout extends Component {
   render() {
     const { title, children } = this.props
     const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
-    console.log(opacity)
 
     return (
       <Wrapper>
@@ -29,12 +27,12 @@ class Layout extends Component {
         <div
           style={{
             margin: "auto",
-            padding: "2rem 10rem",
+            // padding: "2rem 10rem",
           }}
         >
           <main>{children}</main>
         </div>
-        <Footer>© {new Date().getFullYear()}, Built for Gwenny</Footer>
+        <Footer>© {new Date().getFullYear()}, Dewdrop Counseling</Footer>
       </Wrapper>
     )
   }
@@ -49,6 +47,7 @@ const Header = styled.div`
 `
 
 const Title = styled.div`
+  font-family: "Times New Roman", Times, serif;
   position: absolute;
   font-size: 8vw;
   text-align: center;
