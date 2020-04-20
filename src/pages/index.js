@@ -28,7 +28,7 @@ class IndexPage extends Component {
             <br />
             <br />
           </Paragraph> */}
-          <Section1>
+          <Intro>
             <br />
             <br />
             <br />
@@ -60,9 +60,8 @@ class IndexPage extends Component {
               and potentially meaningful moments. Let's work together to learn
               to slow down and experience the dewdrops we're given every day.
             </Paragraph>
-          </Section1>
-          {/* <Image src="./assets/dewdrop.png" /> */}
-          <Section2 id="aboutMe">
+          </Intro>
+          <About id="aboutMe">
             <SectionHeader>About Me</SectionHeader>
             <Image src="./assets/gwenny.png" />
             <Paragraph>
@@ -78,9 +77,28 @@ class IndexPage extends Component {
               wellness, which includes tuning into all the different areas of
               life and looking for patterns that may have resulted in seeking
               counseling
+              <br />
+              <br />
+              <br />
+              <span style={{ fontSize: "2.5rem" }}>
+                Gwendolyn Green, LMHC MCAP
+              </span>
+              <br />
+              <span style={{ fontSize: "1rem" }}>
+                B.S. Psychology, University of Florida
+                <br />
+                M.A. Rehabilitation and Mental Health Counseling, University of
+                South Florida <br />
+                Graduate Certificate in Nonprofit Leadership, University of
+                South Florida <br />
+                Licensed Mental Health Counselor, MH10951 <br />
+                Master’s Level Certified Addictions Professional MCAP100330
+                <br />
+                Qualified Supervisor for State Registered Mental Health Interns
+              </span>
             </Paragraph>
-          </Section2>
-          <Section3 id="approach">
+          </About>
+          <Approach id="approach">
             <SectionHeader>Approach</SectionHeader>
             <Paragraph>
               If you’ve had counseling before, every counselor is different and
@@ -109,10 +127,10 @@ class IndexPage extends Component {
               achieve your goals including CBT, Solution Focused, Narrative,
               Existential, and Motivational Interviewing.
             </Paragraph>
-          </Section3>
-          <Section4 id="services">
+          </Approach>
+          <Services id="services">
             <SectionHeader>Services</SectionHeader>
-            <Services>
+            <ServicesContent>
               <span style={{ fontWeight: "bold" }}>
                 Individual Sessions (In person or Telehealth)
               </span>
@@ -126,8 +144,9 @@ class IndexPage extends Component {
               <br />
               Individual Supervision: $50/Hour <br />
               Group Supervision: $30/Hour
-            </Services>
-          </Section4>
+            </ServicesContent>
+            <SectionHeader id="contactMe">Contact Me</SectionHeader>
+          </Services>
         </Wrapper>
       </Layout>
     )
@@ -145,30 +164,31 @@ const Wrapper = styled.div`
   }
 `
 
-const Section1 = styled.div`
+const Intro = styled.div`
   position: relative;
   background-image: url("./assets/sunnyField.png");
   background-size: cover;
   /* height: 100vh; */
 `
-const Section2 = styled.div`
+const About = styled.div`
   position: relative;
   background-image: url("./assets/ladyBug.png");
   background-size: cover;
   /* height: 100vh; */
 `
-const Section3 = styled.div`
+const Approach = styled.div`
   position: relative;
   background-image: url("./assets/closeDew.png");
   background-size: cover;
   /* height: 100vh; */
 `
 
-const Section4 = styled.div`
+const Services = styled.div`
   /* position: relative; */
   background-image: url("./assets/field.png");
   background-size: cover;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   /* height: 100vh; */
 `
@@ -182,13 +202,14 @@ const Section4 = styled.div`
 //   font-size: 1rem;
 // `
 
-const Services = styled.p`
+const ServicesContent = styled.p`
   /* position: absolute; */
   margin: 0 1rem;
+  margin-left: auto;
   padding: 4rem 0;
   color: white;
   text-align: right;
-  float: right;
+  justify-content: flex-end;
   width: 70%;
   font-family: Times, serif;
   font-size: 1rem;
@@ -220,6 +241,7 @@ const Paragraph = styled.p`
 `
 
 const Image = styled.img`
+  margin: 1rem;
   display: block;
 `
 
