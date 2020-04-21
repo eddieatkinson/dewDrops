@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -63,7 +62,28 @@ class IndexPage extends Component {
           </Intro>
           <About id="aboutMe">
             <SectionHeader>About Me</SectionHeader>
-            <Image src="./assets/gwenny.png" />
+            <GwennyPicture>
+              <Image src="./assets/gwenny.png" />
+              <GwennyAchievements>
+                <span style={{ fontSize: "2.3rem", lineHeight: "1.5rem" }}>
+                  Gwendolyn Green, LMHC MCAP
+                </span>
+                <br />
+                <span style={{ fontSize: "1rem" }}>
+                  B.S. Psychology, University of Florida
+                  <br />
+                  M.A. Rehabilitation and Mental Health Counseling, University
+                  of South Florida <br />
+                  Graduate Certificate in Nonprofit Leadership, University of
+                  South Florida <br />
+                  Licensed Mental Health Counselor, MH10951 <br />
+                  Master’s Level Certified Addictions Professional MCAP100330
+                  <br />
+                  Qualified Supervisor for State Registered Mental Health
+                  Interns
+                </span>
+              </GwennyAchievements>
+            </GwennyPicture>
             <Paragraph>
               Hello and welcome! I am a licensed mental health counselor and
               certified addictions professional in Florida with experience as a
@@ -76,26 +96,7 @@ class IndexPage extends Component {
               whole picture as opposed to one specific issue. I focus on overall
               wellness, which includes tuning into all the different areas of
               life and looking for patterns that may have resulted in seeking
-              counseling
-              <br />
-              <br />
-              <br />
-              <span style={{ fontSize: "2.5rem" }}>
-                Gwendolyn Green, LMHC MCAP
-              </span>
-              <br />
-              <span style={{ fontSize: "1rem" }}>
-                B.S. Psychology, University of Florida
-                <br />
-                M.A. Rehabilitation and Mental Health Counseling, University of
-                South Florida <br />
-                Graduate Certificate in Nonprofit Leadership, University of
-                South Florida <br />
-                Licensed Mental Health Counselor, MH10951 <br />
-                Master’s Level Certified Addictions Professional MCAP100330
-                <br />
-                Qualified Supervisor for State Registered Mental Health Interns
-              </span>
+              counseling.
             </Paragraph>
           </About>
           <Approach id="approach">
@@ -146,6 +147,24 @@ class IndexPage extends Component {
               Group Supervision: $30/Hour
             </ServicesContent>
             <SectionHeader id="contactMe">Contact Me</SectionHeader>
+            <Paragraph>
+              Telephone: 813-586-0863 <br />
+              Email: GwendolynGreenFl@gmail.com
+            </Paragraph>
+            <Icons>
+              <a
+                href="https://www.facebook.com/dewdropcounseling/"
+                target="_blank"
+              >
+                <Icon src="./assets/facebook.png" />
+              </a>
+              <a
+                href="https://www.instagram.com/dewdropcounseling/"
+                target="_blank"
+              >
+                <Icon src="./assets/instagram.png" />
+              </a>
+            </Icons>
           </Services>
         </Wrapper>
       </Layout>
@@ -155,11 +174,8 @@ class IndexPage extends Component {
 
 const Wrapper = styled.div`
   display: block;
-  /* margin: 1rem auto; */
-  /* width: 85%; */
   line-height: 1.2rem;
   @media screen and (min-width: 600px) {
-    /* width: 60%; */
     line-height: 1.8rem;
   }
 `
@@ -168,42 +184,47 @@ const Intro = styled.div`
   position: relative;
   background-image: url("./assets/sunnyField.png");
   background-size: cover;
-  /* height: 100vh; */
 `
 const About = styled.div`
   position: relative;
   background-image: url("./assets/ladyBug.png");
   background-size: cover;
-  /* height: 100vh; */
+`
+const GwennyPicture = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+`
+
+const GwennyAchievements = styled.div`
+  flex: 4;
+  margin: 0 1rem;
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+  font-family: Times, serif;
+  font-size: 1rem;
+  @media screen and (min-width: 1200px) {
+    font-size: 1.5rem;
+  }
 `
 const Approach = styled.div`
   position: relative;
   background-image: url("./assets/closeDew.png");
   background-size: cover;
-  /* height: 100vh; */
 `
 
 const Services = styled.div`
-  /* position: relative; */
   background-image: url("./assets/field.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  /* height: 100vh; */
 `
 
-// const Services = styled.p`
-//   color: white;
-//   text-align: right;
-//   float: right;
-//   width: 70%;
-//   margin: 1rem;
-//   font-size: 1rem;
-// `
-
 const ServicesContent = styled.p`
-  /* position: absolute; */
   margin: 0 1rem;
   margin-left: auto;
   padding: 4rem 0;
@@ -219,16 +240,13 @@ const ServicesContent = styled.p`
 `
 
 const SectionHeader = styled.div`
-  /* background-image: linear-gradient(green, black); */
   background-color: #3cb37177;
   color: white;
   padding: 1rem;
   font-size: 1.5rem;
-  /* height: 3rem; */
 `
 
 const Paragraph = styled.p`
-  /* position: absolute; */
   margin: 0 1rem;
   padding: 4rem 0;
   color: white;
@@ -241,8 +259,20 @@ const Paragraph = styled.p`
 `
 
 const Image = styled.img`
+  margin: 1rem auto;
+  flex: 1;
+  width: 75%;
+  height: 75%;
+`
+
+const Icons = styled.div`
+  display: flex;
+  margin: auto;
+`
+
+const Icon = styled.img`
+  width: 50px;
   margin: 1rem;
-  display: block;
 `
 
 export default IndexPage

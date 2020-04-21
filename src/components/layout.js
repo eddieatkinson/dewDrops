@@ -65,7 +65,12 @@ class Layout extends Component {
         <HeaderButton onClick={() => scrollTo("#contactMe")}>
           Contact Me
         </HeaderButton>
-        <HeaderButton>Blog</HeaderButton>
+        <HeaderButton
+          href="https://dewdropcounseling.wordpress.com/"
+          target="_blank"
+        >
+          Blog
+        </HeaderButton>
       </NavbarWrapper>
     )
   }
@@ -94,7 +99,12 @@ class Layout extends Component {
           </HeaderButton>
         </li>
         <li>
-          <HeaderButton>Blog</HeaderButton>
+          <HeaderButton
+            href="https://dewdropcounseling.wordpress.com/"
+            target="_blank"
+          >
+            Blog
+          </HeaderButton>
         </li>
       </HamburgerDropdown>
     )
@@ -113,9 +123,6 @@ class Layout extends Component {
       <Wrapper>
         <Menu>
           {this.state.isMenuOpen ? this.displayMobileMenu() : null}
-          {/* {window.innerWidth < 1200
-            ? this.displayHamburger()
-            : this.displayNavbar()} */}
           {this.displayHamburger()}
           {this.displayNavbar()}
         </Menu>
@@ -196,7 +203,7 @@ const Wrapper = styled.div`
 const Footer = styled.footer`
   padding: 3rem;
   text-align: center;
-  background: #dcdcdc;
+  background: #3cb371;
 `
 
 const HamburgerDropdown = styled.ul`
