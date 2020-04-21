@@ -112,11 +112,11 @@ class Layout extends Component {
 
   render() {
     const { title, children } = this.props
-    const ListLink = props => (
-      <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-        <Link to={props.to}>{props.children}</Link>
-      </li>
-    )
+    // const ListLink = props => (
+    //   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    //     <Link to={props.to}>{props.children}</Link>
+    //   </li>
+    // )
     const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
 
     return (
@@ -128,6 +128,10 @@ class Layout extends Component {
         </Menu>
         <Header>
           <Title style={{ opacity }}>Dewdrop Counseling</Title>
+          <Quote style={{ opacity }}>
+            Let your life lightly dance on the edges of time like dew on the tip
+            of a leaf. ~Rabindranath Tagore
+          </Quote>
         </Header>
         <div
           style={{
@@ -175,12 +179,28 @@ const Title = styled.div`
   font-size: 8vw;
   text-align: center;
   width: 100%;
-  bottom: 16vw;
+  bottom: 20vw;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 1200px) {
     font-size: 5vw;
     bottom: 4vw;
+    text-align: left;
+    margin: 2rem;
+    /* left: 2vw; */
+  }
+`
+
+const Quote = styled.div`
+  color: black;
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  bottom: 11vw;
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin: 2rem;
   }
 `
 
