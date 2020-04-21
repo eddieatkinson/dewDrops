@@ -3,7 +3,7 @@ module.exports = {
     // edit below
     title: `Dewdrop Counseling`,
     author: `Gwendolyn Green`,
-    description: `A website for Dewdrop Counseling`,
+    description: `I am a licensed mental health counselor and certified addictions professional in Tampa, Florida, experienced in addictions, anxiety, depression, stress management, grief, trauma, and career development.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `kylemathews`,
