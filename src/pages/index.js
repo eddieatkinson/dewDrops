@@ -152,18 +152,18 @@ class IndexPage extends Component {
               Email: GwendolynGreenFl@gmail.com
             </Paragraph>
             <Icons>
-              <a
+              <IconAnchors
                 href="https://www.facebook.com/dewdropcounseling/"
                 target="_blank"
               >
                 <Icon src="./assets/facebook.png" />
-              </a>
-              <a
+              </IconAnchors>
+              <IconAnchors
                 href="https://www.instagram.com/dewdropcounseling/"
                 target="_blank"
               >
                 <Icon src="./assets/instagram.png" />
-              </a>
+              </IconAnchors>
             </Icons>
           </Services>
         </Wrapper>
@@ -268,6 +268,11 @@ const Image = styled.img`
 const Icons = styled.div`
   display: flex;
   margin: auto;
+`
+
+const IconAnchors = styled.a`
+  text-decoration: none;
+  box-shadow: none;
 `
 
 const Icon = styled.img`

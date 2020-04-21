@@ -201,6 +201,7 @@ const Wrapper = styled.div`
 `
 
 const Footer = styled.footer`
+  color: white;
   padding: 3rem;
   text-align: center;
   background: #3cb371;
