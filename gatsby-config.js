@@ -3,7 +3,7 @@ module.exports = {
     // edit below
     title: `Dewdrop Counseling`,
     author: `Gwendolyn Green`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
+    description: `A website for Dewdrop Counseling`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `kylemathews`,

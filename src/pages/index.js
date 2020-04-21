@@ -16,17 +16,15 @@ class IndexPage extends Component {
       >
         <SEO
           title="Home"
-          keywords={[`Tampa`, `counseling`, `mental health`, `Gwenny`]}
+          keywords={[
+            `Tampa`,
+            `counseling`,
+            `mental health`,
+            `Gwenny`,
+            `Dewdrop Counseling`,
+          ]}
         />
         <Wrapper>
-          {/* <Paragraph>
-            <br />
-            <br />
-            _______
-            <br />
-            <br />
-            <br />
-          </Paragraph> */}
           <Intro>
             <br />
             <br />
@@ -42,9 +40,6 @@ class IndexPage extends Component {
             <br />
             <br />
             <br />
-            {/* <br />
-            <br />
-            <br /> */}
             <Paragraph>
               Why Dewdrop? Being a Floridian and a runner, I have a great
               appreciation for the outdoors. Waking up early to run before the

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import HamburgerMenu from "react-hamburger-menu"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import "./layout.css"
 
 class Layout extends Component {
   state = {
@@ -41,10 +41,7 @@ class Layout extends Component {
         <HamburgerMenu
           isOpen={this.state.isMenuOpen}
           menuClicked={this.handleHamburgerClick.bind(this)}
-          // width={18}
-          // height={15}
           color="white"
-          // animationDuration={0.5}
         />
       </HamburgerWrapper>
     )
@@ -111,12 +108,7 @@ class Layout extends Component {
   }
 
   render() {
-    const { title, children } = this.props
-    // const ListLink = props => (
-    //   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    //     <Link to={props.to}>{props.children}</Link>
-    //   </li>
-    // )
+    const { children } = this.props
     const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
 
     return (
@@ -187,7 +179,6 @@ const Title = styled.div`
     bottom: 4vw;
     text-align: left;
     margin: 2rem;
-    /* left: 2vw; */
   }
 `
 
