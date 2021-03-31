@@ -144,7 +144,7 @@ class IndexPage extends Component {
             <SectionHeader id="contactMe">Contact Me</SectionHeader>
             <Paragraph>
               Telephone: 813-586-0863 <br />
-              Email: GwendolynGreenFl@gmail.com
+              Email: gwendolyn@dewdropcounseling.com
             </Paragraph>
             <Icons>
               <IconAnchors
